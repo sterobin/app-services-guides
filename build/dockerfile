@@ -1,0 +1,32 @@
+#
+# Copyright RedHat.
+# License: MIT License see the file LICENSE
+#
+
+FROM quay.io/app-sre/ubi8-nodejs-12:latest as builder
+
+
+COPY --chown=default:root / .
+
+RUN node --version
+
+# install all deps, and build client/server
+RUN npm --prefix build install -q \
+  && npm --prefix build run build
+# clear deps, and only install prod deps - needed as server build does not bundle them/node provided functions
+RUN rm -rf build/node_modules \
+  && npm --prefix build install -q --only=production \
+  && npm --prefix build dedupe
+
+# ---------------------------------------------------------------------------- #
+
+FROM quay.io/app-sre/ubi8-nodejs-12:latest
+
+# copy required built output to image
+COPY --from=builder --chown=root:root /opt/app-root/src/LICENSE ./
+COPY --from=builder --chown=root:root /opt/app-root/src/build/dist ./dist
+COPY --from=builder --chown=root:root /opt/app-root/src/build/node_modules ./node_modules
+
+EXPOSE 3000
+
+#ENTRYPOINT [ "node" , "./dist/server/main.js" ]
