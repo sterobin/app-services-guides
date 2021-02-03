@@ -106,7 +106,8 @@ module.exports = (env, argv, useContentHash) => {
         ]
       }),
       new AssetsPlugin({
-        path: './dist'
+        path: './dist',
+        keepInMemory: env === "development"
       }),
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, 'src', 'index.html')
@@ -115,7 +116,8 @@ module.exports = (env, argv, useContentHash) => {
         name: federatedModuleName,
         filename: "remoteEntry.js",
         exposes: {
-          "./QuickStartDrawer": "./src/app/QuickStartDrawerFederated"
+          "./QuickStartDrawer": "./src/app/QuickStartDrawerFederated",
+          "./QuickStartCatalog": "./src/app/QuickStartCatalogFederated"
         },
         shared: {
           ...dependencies,

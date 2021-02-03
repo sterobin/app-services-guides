@@ -10,7 +10,11 @@ import "@cloudmosaic/quickstarts/dist/quickstarts.css";
 import {loadQuickStarts} from "@app/quickstartLoader";
 
 
-const QuickStartDrawerFederated: FunctionComponent = ({ children }) => {
+export type QuickStartDrawerFederatedProps = {
+  basePath?: string
+}
+
+const QuickStartDrawerFederated: FunctionComponent<QuickStartDrawerFederatedProps> = ({ children, basePath }) => {
   const [activeQuickStartID, setActiveQuickStartID] = useLocalStorage(
     "quickstartId",
     ""
@@ -25,7 +29,7 @@ const QuickStartDrawerFederated: FunctionComponent = ({ children }) => {
 
   useEffect(() => {
     const load = async () => {
-      const quickstarts = await loadQuickStarts("")
+      const quickstarts = await loadQuickStarts(basePath || "")
       setAllQuickStarts(quickstarts);
       setAllQuickStartsLoaded(true);
     }
