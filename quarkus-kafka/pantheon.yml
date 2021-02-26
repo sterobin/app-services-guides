@@ -1,0 +1,9 @@
+"!snippet/title README.adoc#using-with-quarkus": https://pantheon.corp.redhat.com/api/assembly/variant.json/53dfb804-2038-4545-b917-2cb01a09ef98
+"!snippet README.adoc#description":
+  type: assembly
+  uuid: 53dfb804-2038-4545-b917-2cb01a09ef98
+  jsonPathExpression: $.assembly.description
+"!snippet/proc README.adoc#task-1": https://pantheon.corp.redhat.com/api/module/variant.json/b2c90e5b-a33c-475f-b6af-da7f32532b89
+"!snippet/proc README.adoc#task-2":
+  type: module
+  uuid: 2f3c3b35-b9f3-4caf-b013-acfc6d5c6b53
