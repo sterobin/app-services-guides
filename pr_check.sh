@@ -40,13 +40,13 @@ ${CONTAINER_ENGINE} pull ${TOOLS_IMAGE}
 
 
 step "Install npm dependencies"
-run npm --prefix build clean-install
+run npm --prefix .build clean-install
 
 step "skipping test until type errors resolved upstream"
 #run npx npm-run-all --serial lint test
 echo "TODO"
 
 step "Test image build"
-run npm  --prefix build run clean    # clean the build dist before testing the container build
-rm -rf build/node_modules/ # clean node_modules before testing the container build
-docker build -t guides:latest -f ./build/dockerfile .
+run npm  --prefix .build run clean    # clean the build dist before testing the container build
+rm -rf .build/node_modules/ # clean node_modules before testing the container build
+docker build -t guides:latest -f ./.build/dockerfile .
