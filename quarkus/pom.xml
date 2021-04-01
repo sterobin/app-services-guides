@@ -109,10 +109,6 @@
       <artifactId>kafka-oauth-client</artifactId>
       <version>0.7.1</version>
     </dependency>
-    <dependency>
-      <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-container-image-s2i</artifactId>
-    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -214,6 +210,12 @@
           </plugin>
         </plugins>
       </build>
+    </profile>
+    <profile>
+      <id>openshift</id>
+      <properties>
+        <quarkus.container-image.builder>s2i</quarkus.container-image.builder>
+      </properties>
     </profile>
   </profiles>
 </project>
