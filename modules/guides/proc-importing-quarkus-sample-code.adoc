@@ -2,17 +2,17 @@
 = Importing the Quarkus sample code
 :imagesdir: ../_images
 
-For this quick start, you'll use the Quarkus sample code from the {product} https://github.com/bf2fc6cc711aee1a0c2a/guides[Guides and Samples] repository in GitHub. After you understand the concepts and tasks in this quick start, you can use your own Quarkus applications with {product} in the same way.
+For this quick start, you'll use the Quarkus sample code from the {product} {samples-git-repo}[Guides and Samples^] repository in GitHub. After you understand the concepts and tasks in this quick start, you can use your own Quarkus applications with {product} in the same way.
 
 .Procedure
-. On the command line, clone the {product} https://github.com/bf2fc6cc711aee1a0c2a/guides[Guides and Samples] repository from GitHub.
+. On the command line, clone the {product} {samples-git-repo}[Guides and Samples^] repository from GitHub.
 +
 .Cloning the guides and samples repository
 [source,subs="+attributes"]
 ----
-$ mkdir guides && git clone {samples-git-repo}
+git clone {samples-git-repo} guides
 ----
-. In your IDE, import the `guides/quarkus` directory from the repository that you cloned.
+. In your IDE, import the `code-examples/quarkus-kafka-quickstart` directory from the repository that you cloned.
 
 ifdef::qs[]
 .Verification
