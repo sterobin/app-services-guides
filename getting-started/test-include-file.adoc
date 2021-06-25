@@ -1,0 +1,3 @@
+[id="test-file-reuse_{context}"]
+
+Test of reused file, included in multiple assemblies.
