@@ -213,6 +213,13 @@ ifndef::qs[]
 * Verify that the new Kafka topic is listed in the topics table.
 endif::[]
 
+//@ascii-fun: If you remove the + symbol from the attributes subs, the portion enclosed in < > brackets isn't rendered. All other enclosures don't pose this problem, but for angle-bracketed examples, the + symbol is required. Would be nice if some linting could check that any subs entries have + symbol in order to add the substitution attribute type to the default substitution group and avoid that bug.
+
+[source,options="nowrap", subs="+attributes,+quotes"]
+----
+git clone __<user-replaced_value>__ __{samples-git-repo}__ app-services-guides
+----
+
 [role="_additional-resources"]
 
 //@ascii-fun: Apparently if you add a line break here, people say it breaks the build. But as you can see, I've put one here and it still builds fine. So not sure on that one.
