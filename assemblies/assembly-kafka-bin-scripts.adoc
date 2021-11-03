@@ -4,11 +4,6 @@ ifdef::context[:parent-context: {context}]
 :context: using-kafka-bin-scripts
 :imagesdir: _images
 
-[IMPORTANT]
-====
-{product-long} is currently available for Development Preview. Development Preview releases provide early access to a limited set of features that might not be fully tested and that might change in the final GA version. Users should not use Development Preview software in production or for business-critical workloads. Limited documentation is available for Development Preview releases and is typically focused on fundamental user goals.
-====
-
 // Purpose statement for the assembly
 [role="_abstract"]
 As a developer of applications and services, you can use Kafka scripts to manage your Kafka instances in {product-long}.
@@ -37,7 +32,7 @@ endif::[]
 [source]
 ----
 $ ./kafka-console-producer.sh --version
-2.7.0 (Commit:448719dc99a19793)
+3.0.0 (Commit:8cb0a5e9d3441962)
 ----
 
 ifdef::qs[]

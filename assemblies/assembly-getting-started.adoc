@@ -4,11 +4,6 @@ ifdef::context[:parent-context: {context}]
 :context: getting-started
 :imagesdir: _images
 
-[IMPORTANT]
-====
-{product-long} is currently available for Development Preview. Development Preview releases provide early access to a limited set of features that might not be fully tested and that might change in the final GA version. Users should not use Development Preview software in production or for business-critical workloads. Limited documentation is available for Development Preview releases and is typically focused on fundamental user goals.
-====
-
 // Purpose statement for the assembly
 [role="_abstract"]
 As a developer of applications and services, you can use {product-long} to create and set up Kafka instances and connect your applications and services to these instances. {product} is a managed cloud service that enables you to add Kafka data-streaming functionality in your applications without having to install, configure, run, and maintain your own Kafka clusters.
@@ -49,7 +44,7 @@ include::modules/guides/proc-viewing-metrics.adoc[leveloffset=+1]
 [role="_additional-resources"]
 == Additional resources
 * https://kafka.apache.org/081/documentation.html#configuration[Configuration^] in Kafka
-* {base-url}{rhoas-cli-url}[_Getting started with the `rhoas` CLI_^]
+* {base-url}{rhoas-cli-kafka-url}[_Getting started with the `rhoas` CLI for {product-long}_^]
 * {base-url-cli}{rhoas-cli-ref-url}[_CLI command reference (rhoas)_^]
 * {base-url}{kafkacat-url}[_Configuring and connecting Kafkacat with {product-long}_^]
 * {base-url}{kafka-bin-scripts-url}[_Configuring and connecting Kafka scripts with {product-long}_^]
