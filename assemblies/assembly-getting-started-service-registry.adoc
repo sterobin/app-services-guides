@@ -4,11 +4,6 @@ ifdef::context[:parent-context: {context}]
 :context: getting-started-sr
 :imagesdir: _images
 
-[IMPORTANT]
-====
-{registry-product-long} is currently available for Development Preview. Development Preview releases provide early access to a limited set of features that might not be fully tested and that might change in the final GA version. Users should not use Development Preview software in production or for business-critical workloads. Limited documentation is available for Development Preview releases and is typically focused on fundamental user goals.
-====
-
 // Purpose statement for the assembly
 [role="_abstract"]
 As a developer of applications and services, you can use {registry-product-long} to create and set up {registry} instances and connect your applications and services to these instances. {registry} is a managed cloud service that enables you to manage schema and API definitions in your applications without having to install, configure, run, and maintain your own {registry} clusters.
@@ -17,7 +12,7 @@ For more overview information about {registry}, see https://access.redhat.com/do
 
 ifndef::community[]
 .Prerequisites
-* You have a Red Hat account.
+* You have a {org-name} account.
 * You have a subscription to {product-long}.
 //For more information about signing up, see *<@SME: Where to link?>*.
 endif::[]
@@ -31,10 +26,7 @@ Learn how to create and set up your first {registry} instance in {registry-produ
 [#introduction]
 Welcome to the quick start for {registry-product-long}. In this quick start, you'll learn how to create and view a {registry} instance, create a schema in this instance, and create a service account to connect an application or service to this instance.
 endif::[]
-ifndef::community[]
-endif::[]
-ifdef::qs[]
-endif::[]
+
 include::modules/guides/proc-creating-service-registry-instance.adoc[leveloffset=+1]
 
 include::modules/guides/proc-uploading-registry-schema.adoc[leveloffset=+1]
@@ -50,5 +42,9 @@ ifdef::qs[]
 [#conclusion]
 Congratulations! You successfully completed the {registry} Getting Started quick start, and are now ready to use the service.
 ifdef::qs[]
+[#conclusion]
+Congratulations! You successfully completed the {registry} Getting Started quick start, and are now ready to use the service.
 endif::[]
+ifdef::parent-context[:context: {parent-context}]
+ifndef::parent-context[:!context:]
 
